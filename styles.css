@@ -1,0 +1,187 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8fafc;
+    color: #212a34;
+    margin: 0;
+    font-size: 1.07em;
+}
+header {
+    background: linear-gradient(100deg, #22696a 60%, #1f2b3a 100%);
+    color: #fff;
+    text-align: center;
+    padding: 38px 20px 18px 20px;
+}
+header h1 {
+    font-size: 2.1em;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: 1px;
+}
+header h1 span {
+    color: #ffd046;
+    font-weight: 900;
+}
+.subtitulo {
+    font-size: 1.18em;
+    font-weight: 500;
+    margin-top: 12px;
+    color: #eff9ff;
+}
+main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 18px 2vw;
+}
+.galeria-principal {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 28px 0 32px 0;
+    background: #e3fbe6;
+    border-radius: 12px;
+    padding: 18px 7px;
+    flex-wrap: wrap;
+}
+.destacada {
+    width: 160px;
+    height: 110px;
+    object-fit: cover;
+    border: 5px solid #dbcc7b;
+    border-radius: 12px;
+    box-shadow: 0 3px 14px -4px #195;
+    margin-bottom: 6px;
+    transition: transform 0.19s;
+    cursor: pointer;
+}
+.destacada:hover {
+    transform: scale(1.11);
+    box-shadow: 0 0 22px #2b8a6a99;
+}
+section {
+    margin-bottom: 23px;
+}
+.info, .servicios, .turismo {
+    background: #fff;
+    border-left: 6px solid #ffd046;
+    border-radius: 9px;
+    padding: 20px 18px;
+    box-shadow: 0 2px 10px #ccd7dd46;
+    font-size: 1em;
+}
+.info h2, .servicios h2, .turismo h2, .contacto-destacado h2 {
+    font-size: 1.25em;
+    color: #22696a;
+    margin-top: 0;
+}
+.info ul {
+    font-size: 1em;
+    margin-left: 23px;
+}
+.turismo .mapa {
+    display: block;
+    margin: 23px auto 0 auto;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #116;
+    cursor: pointer;
+}
+.contacto-destacado {
+    background: #faf4e4;
+    border-left: 6px solid #22696a;
+    border-radius: 10px;
+    padding: 18px 12px;
+    box-shadow: 0 2px 7px #ccd7dd46;
+    text-align: center;
+    font-size: 1.09em;
+}
+.contact-card {
+    font-size: 1.13em;
+    color: #212a34;
+    margin-top: 10px;
+}
+.contact-nombre {
+    font-weight: bold;
+    font-size: 1.14em;
+    color: #227c53;
+}
+.wa-boton {
+    display: inline-flex;
+    align-items: center;
+    background: #25d366;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 9px 15px 9px 12px;
+    border-radius: 28px;
+    margin-top: 8px;
+    transition: background 0.18s;
+    font-size: 1em;
+}
+.wa-boton:hover {
+    background: #128c7e;
+    color: #fff;
+}
+.wa-icon {
+    height: 25px;
+    margin-right: 10px;
+}
+footer {
+    background: #1f2b3a;
+    color: #fff;
+    text-align: center;
+    font-size: 0.96em;
+    padding: 14px 0;
+    margin-top: 32px;
+    letter-spacing: 1px;
+}
+/* Modal galería */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 40px;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(22,34,44,0.93);
+}
+.modal-contenido {
+    display: block;
+    margin: auto;
+    max-width: 80vw;
+    max-height: 65vh;
+    box-shadow: 0 0 24px #222, 0 4px 10px #111c;
+    border-radius: 10px;
+}
+.cerrar {
+    position: absolute;
+    top: 10px; right: 30px;
+    color: #ffd046;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 2px 2px 5px #111;
+}
+.cerrar:hover {
+    color: #fff49a;
+}
+@media (max-width: 980px) {
+    .galeria-principal {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+    .destacada, .turismo .mapa {
+        width: 96vw;
+        height: auto;
+        max-width: 99vw;
+    }
+    main {
+        padding: 2vw;
+    }
+    .modal-contenido {
+        max-width: 99vw;
+        max-height: 50vh;
+    }
+}

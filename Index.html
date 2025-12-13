@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Eventos Rancho Familiar El Totoral</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-size: 1.06em; }
+        .info, .servicios, .turismo, .contacto-destacado { font-size: 1em; }
+
+        header h1 { font-size: 2.5em; }
+        header .subtitulo { font-size: 1.24em; }
+
+        @media print {
+            @page { size: A4 landscape; margin: 1cm; }
+            body { font-size: 12pt; background: white !important; color: black !important; }
+            header { background: #22696a !important; color: white !important; -webkit-print-color-adjust: exact; }
+            .galeria-principal { display: flex !important; flex-wrap: wrap; }
+            .destacada { width: 180px !important; height: 120px !important; border: 3px solid #dbcc7b !important; }
+            .info, .servicios, .turismo { border-left: 4px solid #ffd046 !important; background: #f9f9f9 !important; }
+            .contacto-destacado { background: #faf4e4 !important; border-left: 4px solid #22696a !important; }
+            .wa-boton { background: #25d366 !important; color: white !important; -webkit-print-color-adjust: exact; }
+            footer { background: #1f2b3a !important; color: white !important; -webkit-print-color-adjust: exact; }
+            .modal { display: none !important; }
+            main { max-width: none !important; padding: 10px !important; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Centro de Eventos <span>Rancho Familiar El Totoral</span></h1>
+        <p class="subtitulo">Paz y armonía en la naturaleza. Áreas verdes. Piscina. Tinaja. Vista al valle.</p>
+    </header>
+
+    <section class="contacto-destacado" style="margin-top: 10px;">
+        <div class="contact-card">
+            <span class="contact-nombre">Raúl Contreras</span><br>
+            <span class="contact-telefono">
+                <a href="https://wa.me/56973047341" target="_blank" class="wa-boton">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-icon"> WhatsApp +56973047341
+                </a>
+            </span>
+        </div>
+        <div class="contact-card" style="margin-top: 15px;">
+            <span class="contact-nombre">Rosa Contreras</span><br>
+            <span class="contact-telefono">
+                <a href="https://wa.me/56996955846" target="_blank" class="wa-boton">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-icon"> WhatsApp +56996955846
+                </a>
+            </span>
+        </div>
+    </section>
+
+    <main>
+        <section class="galeria-principal">
+            <img src="1.jpeg" alt="Rancho El Totoral" class="destacada" onclick="abrirModal(this)">
+            <img src="2.jpeg" alt="Piscina" class="destacada" onclick="abrirModal(this)">
+            <img src="3.jpeg" alt="Áreas verdes" class="destacada" onclick="abrirModal(this)">
+            <img src="4.jpeg" alt="Tinaja" class="destacada" onclick="abrirModal(this)">
+            <img src="5.jpeg" alt="Vista panorámica" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (1).jpeg" alt="Instalaciones 1" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (2).jpeg" alt="Instalaciones 2" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (3).jpeg" alt="Instalaciones 3" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (4).jpeg" alt="Instalaciones 4" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (5).jpeg" alt="Instalaciones 5" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (6).jpeg" alt="Instalaciones 6" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (7).jpeg" alt="Instalaciones 7" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (8).jpeg" alt="Instalaciones 8" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (9).jpeg" alt="Instalaciones 9" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (10).jpeg" alt="Instalaciones 10" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (11).jpeg" alt="Instalaciones 11" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (12).jpeg" alt="Instalaciones 12" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (13).jpeg" alt="Instalaciones 13" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (14).jpeg" alt="Instalaciones 14" class="destacada" onclick="abrirModal(this)">
+            <img src="6 (15).jpeg" alt="Instalaciones 15" class="destacada" onclick="abrirModal(this)">
+        </section>
+
+        <section class="info">
+            <h2>Exclusividad y Seguridad</h2>
+            <p>Ambiente privado, cerrado y seguro para disfrutar con tranquilidad en familia o amigos.</p>
+            <ul>
+                <li>Recinto cerrado</li>
+                <li>Áreas verdes</li>
+                <li>Piscina amplia</li>
+                <li>Tinaja de madera</li>
+            </ul>
+        </section>
+
+        <section class="servicios">
+            <h2>Servicio de Traslado</h2>
+            <p>Contamos con Bus y Van para facilitar su llegada y retorno con total comodidad, además de brindar un mejor servicio y seguridad.</p>
+        </section>
+
+        <section class="turismo">
+            <h2>El Totoral camino a Colliguay - Quilpué</h2>
+            <p>"El Totoral" es un área en la comuna de Colliguay, cercana a Quilpué, Chile, que se distingue por sus paisajes de montaña y es conocida por ser un destino para actividades al aire libre como el ciclismo de montaña. La zona es parte del valle de Colliguay, conocido por su geografía montañosa y la flora local, y conecta con el pueblo de Colliguay a través de la Cuesta Colliguay.<br>Productos artesanales: licores, mermeladas, dulces, cuero, lana, cerámica y madera.</p>
+            <img src="Mapa.JPG" alt="Mapa" class="mapa" onclick="abrirModal(this)">
+        </section>
+    </main>
+
+    <section class="contacto-destacado">
+        <div class="contact-card">
+            <span class="contact-nombre">Raúl Contreras</span><br>
+            <span class="contact-telefono">
+                <a href="https://wa.me/56973047341" target="_blank" class="wa-boton">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-icon"> WhatsApp +56973047341
+                </a>
+            </span>
+        </div>
+        <div class="contact-card" style="margin-top: 15px;">
+            <span class="contact-nombre">Rosa Contreras</span><br>
+            <span class="contact-telefono">
+                <a href="https://wa.me/56996955846" target="_blank" class="wa-boton">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-icon"> WhatsApp +56996955846
+                </a>
+            </span>
+        </div>
+    </section>
+
+    <div id="miModal" class="modal" onclick="cerrarModal()">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img class="modal-contenido" id="imagenModal">
+    </div>
+
+    <footer>
+        <p>&copy; 2020 Rancho Familiar El Totoral. Quilpué, Chile.</p>
+    </footer>
+
+    <script>
+        function abrirModal(elemento) {
+            event.stopPropagation();
+            document.getElementById('miModal').style.display = 'block';
+            document.getElementById('imagenModal').src = elemento.src;
+        }
+
+        function cerrarModal() {
+            document.getElementById('miModal').style.display = 'none';
+        }
+
+        document.onkeydown = function(evt) {
+            evt = evt || window.event;
+            if (evt.key === 'Escape') cerrarModal();
+        };
+    </script>
+</body>
+</html>
