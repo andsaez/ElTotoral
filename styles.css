@@ -1,7 +1,4 @@
 
-p {
-    text-align: justify;
-}
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #f8fafc;
@@ -30,6 +27,10 @@ header h1 span {
     font-weight: 500;
     margin-top: 12px;
     color: #eff9ff;
+}
+p {
+    text-align: justify;
+    text-justify: inter-word;
 }
 main {
     max-width: 1180px;
