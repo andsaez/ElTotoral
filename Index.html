@@ -27,14 +27,13 @@
         }
     </style>
 </head>
-
-<audio controls loop>
-    <source src="bosque.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio HTML5.
-</audio>
-
-    
 <body>
+    <!-- Audio de fondo -->
+    <audio id="musicaFondo" loop>
+        <source src="bosque.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
     <header>
         <h1>Centro de Eventos <span>Rancho Familiar El Totoral</span></h1>
         <p class="subtitulo">Paz y armonía en la naturaleza. Áreas verdes. Piscina. Tinaja. Vista al valle.</p>
@@ -106,7 +105,7 @@
         </section>
     </main>
 
-  <section class="contacto-destacado" style="margin-top: 10px;">
+    <section class="contacto-destacado" style="margin-top: 10px;">
         <div class="contact-card">
             <span class="contact-nombre">Raúl Contreras</span><br>
             <span class="contact-telefono">
@@ -135,6 +134,7 @@
     </footer>
 
     <script>
+        // Galería (ya existente)
         function abrirModal(elemento) {
             event.stopPropagation();
             document.getElementById('miModal').style.display = 'block';
@@ -149,16 +149,31 @@
             evt = evt || window.event;
             if (evt.key === 'Escape') cerrarModal();
         };
+
+        // Audio: intentar reproducir al cargar y, si falla, al primer clic en la página
+        const musica = document.getElementById('musicaFondo');
+
+        function intentarReproducirAudio() {
+            if (!musica) return;
+            const promesa = musica.play();
+            if (promesa !== undefined) {
+                promesa.catch(() => {
+                    // Si el navegador bloquea el autoplay, se esperará al primer clic
+                });
+            }
+        }
+
+        // Intento inicial al cargar
+        window.addEventListener('load', intentarReproducirAudio);
+
+        // Forzar reproducción en el primer gesto de usuario en la página
+        function manejarPrimerInteraccion() {
+            intentarReproducirAudio();
+            // Eliminar el listener para no repetirlo
+            document.removeEventListener('click', manejarPrimerInteraccion);
+        }
+
+        document.addEventListener('click', manejarPrimerInteraccion, { once: true });
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
